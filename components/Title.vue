@@ -1,8 +1,8 @@
 <template lang="html">
  <div class="title">
-  <h1 v-if="type === 'h1'" :class="className">{{ content }}</h1>
-  <h2 v-if="type === 'h2'" :class="className">{{ content }}</h2>
-  <h3 v-if="type === 'h3'" :class="className">{{ content }}</h3>
+  <h1 v-if="type === 'h1'" :class="className">{{ contentTitle }}</h1>
+  <h2 v-if="type === 'h2'" :class="className">{{ contentTitle }}</h2>
+  <h3 v-if="type === 'h3'" :class="className">{{ contentTitle }}</h3>
   <p v-if="subtitle">{{ contentSub }}</p>
  </div>
 </template>
