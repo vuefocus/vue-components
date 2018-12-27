@@ -23,7 +23,7 @@ export default {
      link: String,
      onClick: {
       type: Function
-     }
+     },
      type: String
     }
 }
