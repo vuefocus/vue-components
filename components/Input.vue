@@ -12,6 +12,7 @@ export default {
  },
  props: {
   className: String,
+  content: Object,
   inputPlaceholder: String,
   onClick: {
    type: Function

@@ -2,14 +2,14 @@
  <div class="Button">
   <router-link v-if="type === 'link'" :to="{ name: link, params: {} }">
    <button :class="className">
-    {{ contentButton }}
+    {{ title }}
    </button>
   </router-link>
   <button v-if="type === 'disabled'" :class="type">
-   {{ contentButton }}
+   {{ title }}
   </button>
   <button v-if="type === 'onClick'" :class="className" @click="onClick">
-   {{ contentButton }}
+   {{ title }}
   </button>
  </div>
 </template>
@@ -19,7 +19,8 @@ export default {
     name: "Button",
     props: {
      className: String,
-     contentButton: String,
+     content: Object,
+     title: String,
      link: String,
      onClick: {
       type: Function

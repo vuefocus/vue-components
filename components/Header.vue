@@ -9,6 +9,7 @@ export default {
  name: "Header",
  props: {
   className: String,
+  content: Object,
   onClick: {
    type: Function
   },

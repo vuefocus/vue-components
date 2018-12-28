@@ -10,6 +10,7 @@
 export default {
  name: "CallToAction",
  props: {
+  content: Object,
   linkTo: String,
   onClick: {
    type: Function
