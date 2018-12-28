@@ -11,6 +11,7 @@
 export default {
     name: "title",
     props: {
+     content: Object,
      contentTitle: String,
      contentSubtitle: String,
      className: String,
