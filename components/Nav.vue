@@ -13,9 +13,6 @@
 <script>
 export default {
  name: "Navigation",
- data() {
-  return {}
- },
  props: {
   className: String,
   content: Object
