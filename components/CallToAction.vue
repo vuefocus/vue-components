@@ -3,7 +3,7 @@
    <router-link v-if="type === 'internal' || content.type === 'internal'" :to="{ name: link || content.link, params: btnParams }">
     {{ title || content.title }}
    </router-link>
-   <a v-if="type === 'external' || content.type === 'external'" :href="link || content.link">{{ title || content.title }}</a>
+   <a v-if="type === 'external' || content.type === 'external'" :href="link || content.link" target="_blank">{{ title || content.title }}</a>
   </div>
 </template>
 
