@@ -4,6 +4,7 @@
     {{ title || content.title }}
    </router-link>
    <a v-if="type === 'external' || content.type === 'external'" :href="link || content.link" target="_blank">{{ title || content.title }}</a>
+   <p v-if="type === 'onClick' || content.type === 'onClick'" @click="onClick">{{ title || content.title }}</p>
   </div>
 </template>
 
