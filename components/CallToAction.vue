@@ -1,9 +1,9 @@
 <template lang="html">
   <div class="CallToAction">
-   <router-link v-if="type === 'internal' || content.type === 'internal'" :to="{ name: linkTo || content.linkTo, params: btnParams }">
+   <router-link v-if="type === 'internal' || content.type === 'internal'" :to="{ name: link || content.link, params: btnParams }">
     {{ title || content.title }}
    </router-link>
-   <a v-if="type === 'external' || content.type === 'external'" href="#">{{ title || content.title }}</a>
+   <a v-if="type === 'external' || content.type === 'external'" :href="link || content.link">{{ title || content.title }}</a>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
  name: "CallToAction",
  props: {
   content: Object,
-  linkTo: String,
+  link: String,
   onClick: {
    type: Function
   },
