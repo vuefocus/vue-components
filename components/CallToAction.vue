@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="CallToAction">
-   <router-link v-if="type === 'internal' || content.type === 'internal'" :to="{ name: linkTo, params: btnParams }">
+   <router-link v-if="type === 'internal' || content.type === 'internal'" :to="{ name: linkTo || content.linkTo, params: btnParams }">
     {{ title || content.title }}
    </router-link>
    <a v-if="type === 'external' || content.type === 'external'" href="#">{{ title || content.title }}</a>
