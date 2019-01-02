@@ -46,5 +46,8 @@ export default {
             box-shadow: none;
         }
     }
+    .disabled {
+        opacity: 0.25;
+    }
 }
 </style>
