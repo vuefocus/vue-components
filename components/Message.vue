@@ -20,7 +20,7 @@ export default {
 .Message {
     max-width: 300px;
     position: absolute;
-    bottom: 25px;
+    top: 25px;
     right: 25px;
     color: white;
     padding: 15px;
