@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="Card">
-   {{ content }}
+   <p v-if="content" v-for="el, index in content" :key="index">{{ el }}</p>
+   <p v-if="array" v-for="el, index in array" :key="index">{{ el }}</p>
   </div>
 </template>
 
@@ -9,6 +10,7 @@ export default {
  name: "Card",
  props: {
   content: Object,
+  array: Array,
   onClick: {
    type: Function
   }
@@ -18,10 +20,5 @@ export default {
 
 <style lang="scss">
 .Card {
-    padding: 25px;
-    margin: 0 0 20px;
-    -webkit-box-shadow: 0 0 35px 5px rgba(0, 0, 0, 0.045);
-    -moz-box-shadow: 0 0 35px 5px rgba(0, 0, 0, 0.045);
-    box-shadow: 0 0 35px 5px rgba(0, 0, 0, 0.045);
 }
 </style>
