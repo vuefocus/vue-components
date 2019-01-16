@@ -1,5 +1,8 @@
 <template lang="html">
-  <input v-model="attachment" :class="className" :placeholder="inputPlaceholder" @input="showMe">
+  <div class="Input">
+   <label v-if="content.label">{{ content.label }}</label>
+   <input :class="className || content.className" :placeholder="inputPlaceholder || content.inputPlaceholder">
+  </div>
 </template>
 
 <script>
@@ -18,16 +21,19 @@ export default {
    type: Function
   },
   title: String
- },
- methods: {
-  showMe() {
-   console.log(this.attachment)
-  }
  }
 }
 </script>
 
 <style lang="scss">
-input {
+.Input {
+    input {
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            transition: 0.25s;
+        }
+
     }
+}
 </style>
